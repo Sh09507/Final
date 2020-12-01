@@ -18,6 +18,7 @@
 			<label for="titlebox">Hex color code:</label>
 			<input type="text" name="hex" id="hexbox">
 		</fieldset>
+		<input type="submit" value="Convert" />
 	</form>
 </body>
 </html>
