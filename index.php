@@ -18,6 +18,7 @@
 			<button onclick="return calc();">Convert</button>
 				<p id="answer"></p>
 				<script>
+					//XML section came from professor Thackston's in-class lecture.
 					function calc() {
 						console.log("hi");
 						let xval = document.getElementById('x').value;
