@@ -14,13 +14,13 @@
 		<fieldset id="contact">
 		<legend>Please enter 6 digits hex color code</legend>
 			<label for="titlebox">Hex color code:</label>
-			<input type="text" name="hex" id="hexbox">
+			<input type="text" name="x" id="x">
 			<button onclick="return calc();">Convert</button>
 				<p id="answer"></p>
 				<script>
 					function calc() {
 						console.log("hi");
-						let xval1 = document.getElementById('x1').value;
+						let xval = document.getElementById('x').value;
 						var xhttp = new XMLHttpRequest();
 						xhttp.onreadstatechange = function() {
 							if (this.readyState == 4 && this.status == 200) {
@@ -30,7 +30,7 @@
 						};
 						xhttp.open("POST", 'https://us-east1-it-5236-dismob.cloudfunctions.net/function-final', true);
 						xhttp.setRequestHeader("Content-type", "application/json");
-						xhttp.send(JSON.stringify({x1:xval1}));
+						xhttp.send(JSON.stringify({x:xval}));
 						console.log(this.responseText);
 						console.log(this.readyState);
 						console.log("bye");
