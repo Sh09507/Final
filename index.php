@@ -24,6 +24,8 @@
 						var xhttp = new XMLHttpRequest();
 						xhttp.onreadstatechange = function() {
 							if (this.readyState == 4 && this.status == 200) {
+								console.log(this.responseText);
+								console.log(this.readyState);
 								console.log(document.getElementById('answer'));
 								document.getElementById('answer').innerHTML = "Hex color code: " + this.responseText;
 							}
@@ -31,8 +33,6 @@
 						xhttp.open("POST", 'https://us-east1-it-5236-dismob.cloudfunctions.net/function-final', true);
 						xhttp.setRequestHeader("Content-type", "application/json");
 						xhttp.send(JSON.stringify({x:xval}));
-						console.log(this.responseText);
-						console.log(this.readyState);
 						console.log("bye");
 					}
 				</script>
